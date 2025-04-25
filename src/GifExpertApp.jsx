@@ -8,7 +8,7 @@ export const GifExpertApp = () => {
   const onAddCategory = (newCategory) => {
     setCategories([]);
     if (categories.includes(newCategory)) return; //Evitar que se repita la categoria
-    setCategories([newCategory, ...categories]); //Mostrar
+    setCategories([newCategory]); //Mostrar
   };
 
   return (
@@ -20,7 +20,6 @@ export const GifExpertApp = () => {
       {categories.map((category) => (
         <div key={category}>
           <GifGrid category={category}></GifGrid>
-          <button>ola</button>
         </div>
       ))}
     </>
